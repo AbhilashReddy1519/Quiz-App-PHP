@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(135deg, #ffffff, #9699b7);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 30px;
+    border: 1px dashed transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.rules h1 {
+    color: rgb(8, 0, 255);
+}
+
+.rules ul {
+    list-style: none;
+    padding: 15px 10px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.rules ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rules ul li span {
+    font-weight: normal;
+}
+
+.instructions h2 {
+    color: rgb(8, 0, 255);
+}
+
+.instructions ol {
+    padding: 15px 0 10px 30px;
+    line-height: 30px;
+
+}
+
+.container ol li ul {
+    list-style: disc;
+}
+
+.navigation img {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+
+.tools h2 {
+    color: rgb(8, 0, 255);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+}
+
+.buttons button {
+    padding: 10px 10px;
+}
+
