@@ -6,17 +6,27 @@
     box-sizing: border-box;
 }
 
+body {
+    padding-bottom: 40px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 1px 0;
+}
+
 .container {
     background: linear-gradient(135deg, #ffffff, #9699b7);
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-between;
     padding: 50px;
     margin: 30px;
     border: 1px dashed transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
+    padding-bottom: 0;
 }
 
 .rules h1 {
@@ -70,10 +80,74 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 500px;
+    gap: 20px;
 }
 
-.buttons button {
-    padding: 10px 10px;
+.allBtn li button{
+    color: #ffffff;
+    cursor: pointer;
 }
 
+.buttons ul li{
+    list-style: none;
+    margin: 20px;
+    padding: 0 5px;
+}
+
+.buttons ul li:nth-child(1) button{
+    background: rgb(58, 204, 58);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.buttons ul li:nth-child(2) button{
+    background: rgb(58, 204, 58);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 95px;
+    margin: 5px 0;
+}
+
+.buttons ul li:nth-child(3) button{
+    background: orange;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.buttons ul li:nth-child(4) button{
+    background: red;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.check {
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.check label {
+    margin-left: 6px;
+}
+
+.start {
+    background: #b1e4a9;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.start button {
+    margin-right: 20px;
+    padding: 5px 10px;
+    background: green;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;   
+}

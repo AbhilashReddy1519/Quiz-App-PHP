@@ -37,33 +37,34 @@
                 </ol>
             </div>
         </div>
+        <hr>
         <div class="navigation">
             <img src="./images/online.png" alt="assessment test image">
             <div class="tools">
                 <h2>Navigation Tools</h2>
                 <div class="buttons">
-                    <button>Next</button>
-                    <p>Next: By clicking Next button the next question will appear to the User.</p>
+                    <ul class="allBtn">
+                        <li><button>Next &RightArrow;</button></li>
+                        <li><button>&leftarrow; Previous</button></li>
+                        <li><button>Flag &#9873;</button></li>
+                        <li><button>End Test</button></li>
+                    </ul>
+                    <ul>
+                        <li><span style="font-weight: bold;">Next:</span> By clicking Next button the next question will appear to the User.</li>
+                        <li><span style="font-weight: bold;">Previous:</span> By clicking Previous button the previous question will appear to the User.</li>
+                        <li><span style="font-weight: bold;">Flag:</span> To flag a question (To Respond Later), choose an answer and click on flag button.</li>
+                        <li><span style="font-weight: bold;">End Test:</span> By clicking End Test Button the test gets submitted.</li>
+                    </ul>
                 </div>
-                <div class="buttons">
-                    <button>Previous</button>
-                    <p>Previous: By clicking Previous button the previous question will appear to the User.</p>
+                <div class="check">
+                    <input type="checkbox" name="agree" id="agree"><label for="agree">I have gone through the instructions, understood legends and will hereby follow the same.</label>
                 </div>
-                <div class="buttons">
-                    <button>Flag</button>
-                    <p>Flag: To flag a question (To Respond Later), choose an answer and click on flag button.</p>
-                </div>
-                <div class="buttons">
-                    <button>End Test</button>
-                    <p>End Test: By clicking End Test Button the test gets submitted.</p>
-                </div>
-                <input type="checkbox" name="agree" id="agree"><label for="agree">I have gone through the instructions, understood legends and will hereby follow the same.</label>
             </div>
         </div>
     </div>
 
     <div class="start">
-        <button>Start</button>
+        <button>Start Test   &check;</button>
     </div>
 </body>
 </html>
