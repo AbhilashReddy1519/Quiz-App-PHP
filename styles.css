@@ -7,6 +7,7 @@
 }
 
 body {
+    background: linear-gradient(90deg, #2c3e50, #3498db);
     padding-bottom: 40px;
 }
 
@@ -16,7 +17,7 @@ button {
 }
 
 .container {
-    background: linear-gradient(135deg, #ffffff, #9699b7);
+    background: linear-gradient(135deg, #ffffff, #ecf0f1);
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -30,7 +31,7 @@ button {
 }
 
 .rules h1 {
-    color: rgb(8, 0, 255);
+    color: #2980b9;
 }
 
 .rules ul {
@@ -50,7 +51,7 @@ button {
 }
 
 .instructions h2 {
-    color: rgb(8, 0, 255);
+    color: #2980b9;
 }
 
 .instructions ol {
@@ -73,7 +74,7 @@ button {
 }
 
 .tools h2 {
-    color: rgb(8, 0, 255);
+    color: #2980b9;
 }
 
 .buttons {
@@ -95,28 +96,28 @@ button {
 }
 
 .buttons ul li:nth-child(1) button{
-    background: rgb(58, 204, 58);
-    border: 1px solid black;
+    background: #27ae60;  /* Green for Next */
+    border: 1px solid #219a52;
     border-radius: 5px;
 }
 
 .buttons ul li:nth-child(2) button{
-    background: rgb(58, 204, 58);
-    border: 1px solid black;
+    background: #27ae60;  /* Green for Previous */
+    border: 1px solid #219a52;
     border-radius: 5px;
     width: 95px;
     margin: 5px 0;
 }
 
 .buttons ul li:nth-child(3) button{
-    background: orange;
-    border: 1px solid black;
+    background: #f39c12;  /* Orange for Flag */
+    border: 1px solid #d68910;
     border-radius: 5px;
 }
 
 .buttons ul li:nth-child(4) button{
-    background: red;
-    border: 1px solid black;
+    background: #e74c3c;  /* Red for End Test */
+    border: 1px solid #c0392b;
     border-radius: 5px;
 }
 
@@ -130,7 +131,7 @@ button {
 }
 
 .start {
-    background: #b1e4a9;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
     position: fixed;
     bottom: 0;
     z-index: 999;
@@ -144,10 +145,20 @@ button {
 .start button {
     margin-right: 20px;
     padding: 5px 10px;
-    background: green;
+    background: #2ecc71;  /* Bright green for Start */
     border-radius: 5px;
-    border: 1px solid transparent;
-    cursor: pointer;
+    border: 1px solid #39ea83;
+    opacity: 0.7;
+    transition: all 0.3s ease;
     font-size: 1rem;
     color: white;   
+}
+
+.start button:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+}
+
+ul li span {
+    font-weight: bold;
 }

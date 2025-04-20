@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="./images/quiz.ico" type="image/x-icon">
     <title>Quiz-Test</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -50,21 +51,25 @@
                         <li><button>End Test</button></li>
                     </ul>
                     <ul>
-                        <li><span style="font-weight: bold;">Next:</span> By clicking Next button the next question will appear to the User.</li>
-                        <li><span style="font-weight: bold;">Previous:</span> By clicking Previous button the previous question will appear to the User.</li>
-                        <li><span style="font-weight: bold;">Flag:</span> To flag a question (To Respond Later), choose an answer and click on flag button.</li>
-                        <li><span style="font-weight: bold;">End Test:</span> By clicking End Test Button the test gets submitted.</li>
+                        <li><span>Next:</span> By clicking Next button the next question will appear to the User.</li>
+                        <li><span>Previous:</span> By clicking Previous button the previous question will appear to the User.</li>
+                        <li><span>Flag:</span> To flag a question (To Respond Later), choose an answer and click on flag button.</li>
+                        <li><span>End Test:</span> By clicking End Test Button the test gets submitted.</li>
                     </ul>
                 </div>
                 <div class="check">
-                    <input type="checkbox" name="agree" id="agree"><label for="agree">I have gone through the instructions, understood legends and will hereby follow the same.</label>
+                    <input type="checkbox" name="agree" id="agree" required><label for="agree">I have gone through the instructions, understood legends and will hereby follow the same.</label>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="start">
-        <button>Start Test   &check;</button>
+        <button id="stBtn">Start Test &check;</button>
+    </div>
+
+    <div class="quiz-start">
+        
     </div>
 </body>
 </html>
