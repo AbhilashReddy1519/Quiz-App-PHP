@@ -42,39 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function startQuiz() {
-        // Hide start button and show quiz interface
-        btn.style.display = 'none';
-        displayQuestion(currentQuestion);
-        displayNavigation();
+        // Hide instruction container and start button
+        document.querySelector('.container').style.display = 'none';
+        document.querySelector('.start').style.display = 'none';
+        
+        // Show quiz interface
+        const quizStart = document.querySelector('.quiz-start');
+        quizStart.style.display = 'block'; // Show the quiz container
+        
+        // Display first question
+        const questionContainer = document.querySelector('.quiz-start .question');
+        questionContainer.innerHTML = getQuestionHTML(currentQuestion);
+        saveData();
     }
 
-    function displayQuestion(index) {
-        if (!quizData || !quizData.questions) {
-            console.error('Quiz data not loaded yet');
-            return;
-        }
-        
+    function getQuestionHTML(index) {
         const question = quizData.questions[index];
-        if (!question) {
-            console.error('Question not found at index:', index);
-            return;
-        }
-
-        const questionHTML = `
-            <div class="question">
-                <h3>Question ${index + 1} of ${quizData.questions.length}</h3>
-                <p>${question.question}</p>
-                <div class="options">
-                    ${Object.entries(question.options).map(([key, value]) => `
-                        <div class="option">
-                            <input type="radio" name="q${index}" value="${key}" id="opt${key}">
-                            <label for="opt${key}">${key}. ${value}</label>
-                        </div>
-                    `).join('')}
-                </div>
+        return `
+            <h3>Question ${index + 1} of ${quizData.questions.length}</h3>
+            <p>${question.question}</p>
+            <div class="options">
+                ${Object.entries(question.options).map(([key, value]) => `
+                    <div class="option">
+                        <input type="radio" name="q${index}" value="${key}" id="opt${key}">
+                        <label for="opt${key}">${key}. ${value}</label>
+                    </div>
+                `).join('')}
             </div>
         `;
-        document.querySelector('.container').innerHTML = questionHTML;
     }
 
     function displayNavigation() {
@@ -91,16 +86,29 @@ document.addEventListener('DOMContentLoaded', () => {
     window.prevQuestion = () => {
         if (currentQuestion > 0) {
             currentQuestion--;
-            displayQuestion(currentQuestion);
-            displayNavigation();
+            const questionContainer = document.querySelector('.quiz-start .question');
+            questionContainer.innerHTML = getQuestionHTML(currentQuestion);
+            saveData();
         }
     };
 
     window.nextQuestion = () => {
         if (currentQuestion < quizData.questions.length - 1) {
             currentQuestion++;
-            displayQuestion(currentQuestion);
-            displayNavigation();
+            const questionContainer = document.querySelector('.quiz-start .question');
+            questionContainer.innerHTML = getQuestionHTML(currentQuestion);
+            saveData();
         }
     };
+
+
+    function saveData() {
+        localStorage.setItem('body', body.innerHTML);
+    }
+
+    function getData() {
+        document.body = localStorage.getItem('body').innerHTML;
+    }
+    getData();
+
 });

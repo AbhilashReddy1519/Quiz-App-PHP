@@ -162,3 +162,76 @@ button {
 ul li span {
     font-weight: bold;
 }
+
+.quiz-start {
+    display: none;
+}
+
+.quiz-start .question {
+    margin: 30px auto;
+    width: 600px;
+    max-height: 100vh;
+    min-height: 400px;  
+    background: linear-gradient(145deg, #ffffff, #f5f6fa);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in;
+    padding: 25px;
+}
+
+.quiz-start .question:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.navigationBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    padding: 10px 20px;
+    border-top: 1px dashed white;
+    transition: all 0.3s ease-in;
+}
+
+.navigationBtn:hover {
+    box-shadow: 0 0 10px white;
+}
+
+
+/* Add these new styles for question content */
+.quiz-start .question h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.quiz-start .question p {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.quiz-start .options {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quiz-start .option {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+    transition: all 0.2s ease;
+}
+
+.quiz-start .option:hover {
+    background: #ebf5ff;
+    border-color: #3498db;
+    cursor: pointer;
+}
